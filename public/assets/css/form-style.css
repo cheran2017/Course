@@ -1,0 +1,18 @@
+.right-col .button-submit {
+    background-color: #323130;
+    float: right;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.right-col label 
+{
+    margin-top: 10px !important;
+
+}
+.right-col input {
+    border-radius: 7px;
+    border: 0.5px solid #cdcbc7;
+}
+.right-col {
+    background-color: white !important;
+}
