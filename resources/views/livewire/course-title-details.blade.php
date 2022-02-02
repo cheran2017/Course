@@ -1,6 +1,7 @@
 <div>
     <label for="description">Select Course</label>
     <select class="form-select" name="course_title_id" wire:model = "CourseId"  aria-label="Default select example">
+      <option selected value="">Select Course</option>
       @foreach ($Course as $value)                        
       <option value="{{$value->id}}">{{$value->name}}</option>
       @endforeach

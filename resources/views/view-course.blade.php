@@ -97,6 +97,7 @@
                         <div class="course-side-detail">
                             <div class="csd-title">
                                 <div class="csdt-left">
+                                    <h4 class="mb-0"><s>${{$Course->actual_price}} </s></h4>
                                     <h4 class="mb-0">${{$Course->price}} </h4>
                                 </div>
                                 <div class="csdt-right">
@@ -108,11 +109,11 @@
                                 </div>
                                 <div class="course-enroll">
                                     @if ($CheckEnquiry)                        
-                                    <a class="lab-btn bg-success" >Enquiry Submitted</a>
+                                        <a class="lab-btn bg-success" >Enquiry Submitted</a>
                                     @else
-                                    @if (auth()->user()->role == "0")                        
-                                    <a href="{{route('enquiry', $Course->id)}}" class="lab-btn"><span>Enrolled Now</span></a>
-                                    @endif
+                                        @if (auth()->user()->role == "0")                        
+                                            <a href="{{route('enquiry', $Course->id)}}" class="lab-btn"><span>Enrolled Now</span></a>
+                                        @endif
                                     @endif
                                 </div>
                             </div>

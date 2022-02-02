@@ -51,6 +51,7 @@ class CourseController extends Controller
         $request->file('image')->move(public_path('assets/images/'),$image);
         $course->name                 = $request->name;
         $course->price                = $request->price;
+        $course->actual_price         = $request->actual_price  ;
         $course->video_url            = $request->video_url;
         $course->image                = $image;
         $course->short_description    = $request->short_description;
@@ -96,6 +97,7 @@ class CourseController extends Controller
         $request->file('image')->move(public_path('assets/images/'),$image);
         $course->name                 = $request->name;
         $course->price                = $request->price;
+        $course->actual_price       = $request->actual_price;
         $course->video_url            = $request->video_url;
         $course->image                = $image;
         $course->short_description    = $request->short_description;

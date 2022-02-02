@@ -33,17 +33,19 @@
                     <form action="{{route('course-title-description.update', $CourseTitleDetail->id)}}" method="post" enctype = "multipart/form-data">
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <select class="form-select" name="course_title_id" aria-label="Default select example">
-                            @foreach ($CourseTitle as $item)                        
-                            <option {{$CourseTitleDetail->course_title_id == $item->id? 'selected':''}} value="{{$item->id}}">{{$item->title}}</option>
-                            @endforeach
-                        </select>
-                        <div class="form-group">
-                            <label for="description">Description</label>
-                            <textarea class="form-control" name = "description"  id="exampleFormControlTextarea1" rows="3">{{$CourseTitleDetail->description}}</textarea>
-                        </div>
-                        
-                            <button class="btn btn-primary mt-4 mb-3 text-dark " type="submit">Submit</button>
+
+                      <select class="form-select" name="course_title_id" aria-label="Default select example">
+                          @foreach ($CourseTitle as $item)                        
+                          <option {{$CourseTitleDetail->course_title_id == $item->id? 'selected':''}} value="{{$item->id}}">{{$item->title}}</option>
+                          @endforeach
+                      </select>
+                  
+                      <div class="form-group">
+                          <label for="description">Description</label>
+                          <textarea class="form-control" name = "description"  id="exampleFormControlTextarea1" rows="3">{{$CourseTitleDetail->description}}</textarea>
+                      </div>
+
+                        <button class="btn btn-primary mt-4 mb-3 text-dark " type="submit">Submit</button>
                     </form>
     
                 </div>

@@ -42,6 +42,10 @@
                             <input type="text" value="{{$Course->price}}" name = "price" class="form-control" id="" aria-describedby="Name" >
                         </div>
                         <div class="form-group">
+                          <label for="Name">Actual Price</label>
+                          <input type="text" value="{{$Course->actual_price}}" name = "actual_price" class="form-control" id="" aria-describedby="Name" >
+                        </div>
+                        <div class="form-group">
                             <label for="Name">Video URL</label>
                             <input type="text" value="{{$Course->video_url}}" name = "video_url" class="form-control" id="" aria-describedby="Name" >
                         </div>
