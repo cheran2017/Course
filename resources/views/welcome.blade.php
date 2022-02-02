@@ -10,7 +10,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($Technology as $item)
                         <div class="swiper-slide">
-                            <div class="sponsor-iten">
+                            <div class="sponsor-item">
                                 <div class="sponsor-thumb">
                                     <img class="technology-thumb" src="{{asset('assets/images/'.$item->image)}}" alt="technology">
                                 </div>
