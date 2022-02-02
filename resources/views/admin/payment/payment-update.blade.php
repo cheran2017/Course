@@ -31,6 +31,12 @@
                   
                   <h5 class="card-title">Update payment Details</h5>
 
+                  <h5>Course Name :- <span class="text-primary">{{$Enquiry->Course->name}}</span></h5>
+                  <h5>Course Name :- <span class="text-primary">{{$Enquiry->Course->price}}</span></h5>
+                  <h5>Paid Amount :- <span class="text-success">{{$Enquiry->Payment->sum('amount')}}</span></h5>
+                  <h5>Remaining Amount :- <span class="text-danger">{{$Enquiry->Course->price - $Enquiry->Payment->sum('amount')}}</span></h5>
+                  
+
                
                   <form action="{{route('store-payment',)}}" method="post">
                     @csrf

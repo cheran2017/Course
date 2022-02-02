@@ -27,9 +27,8 @@ class CourseTitleDescriptionController extends Controller
      */
     public function create()
     { 
-        $CourseTitle         = QueryBuilder::for(CourseTitle::class)->get();
         $CourseTitleDetail   = QueryBuilder::for(CourseTitleDetail::class)->get();
-        return view('admin.course-title-detail.course-title-detail', compact('CourseTitle', 'CourseTitleDetail'));
+        return view('admin.course-title-detail.course-title-detail', compact( 'CourseTitleDetail'));
     }
 
     /**

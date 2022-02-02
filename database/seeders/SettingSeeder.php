@@ -16,6 +16,9 @@ class SettingSeeder extends Seeder
     {
         Setting::create([
             'name' => "Admin",            
+            'background_title' => "Title Will Come Here",            
+            'background_description' => "Description Will Come Here",            
+            'background_header' => "Header Will Come Here",            
         ]);
 
     }

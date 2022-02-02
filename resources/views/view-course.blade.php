@@ -36,6 +36,13 @@
                         <div class="course-item">
                             <div class="course-inner">
                                 <div class="course-content">
+                                    <h3>Technology Details</h3>
+                                    @forelse ($Course->technology as $value )
+                                    <p>{{$value->name}}</p>
+                                    @empty
+                                    <p class="text-danger">Technology Not Found</p>
+                                    @endforelse
+
                                     <h3>Course Overview</h3>
                                     <p>{{$Course->detailed_description}}</p>
                                     <h4>What You'll Learn in This Course:</h4>
@@ -47,6 +54,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="course-video">
                             <div class="course-video-title">
@@ -66,9 +74,11 @@
                                             </h2>
                                             <div id="flush-collapse{{$item->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body text-dark bg-white rounded shadow-sm"> 
-                                                @foreach ($item->CourseTitleDescription as $value)
-                                                    {{$value->description}}
-                                                @endforeach
+                                                <ol>
+                                                    @foreach ($item->CourseTitleDescription as $value)
+                                                        <li>{{$value->description}}</li>
+                                                    @endforeach
+                                                </ol>
                                             </div>
                                             </div>
                                         </div>
@@ -87,7 +97,7 @@
                         <div class="course-side-detail">
                             <div class="csd-title">
                                 <div class="csdt-left">
-                                    <h4 class="mb-0"><sup>$</sup>38</h4>
+                                    <h4 class="mb-0">${{$Course->price}} </h4>
                                 </div>
                                 <div class="csdt-right">
                                     <p class="mb-0"><i class="icofont-clock-time"></i>Limited time offer</p>

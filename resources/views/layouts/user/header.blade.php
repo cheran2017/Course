@@ -77,7 +77,7 @@
 
                         @if (Route::has('login'))
                             @auth
-                                <a href="{{ route('user-register')}}" class="signup"><i class="icofont-user"></i> <span>{{auth()->user()->name}}</span> </a>
+                                <a href="{{ route('dashboard')}}" class="signup"><i class="icofont-user"></i> <span>{{auth()->user()->name}}</span> </a>
                             @else
                                 @if (Route::has('register'))
                                 <a href="{{ route('user-register')}}" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span> </a>

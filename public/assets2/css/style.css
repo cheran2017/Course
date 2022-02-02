@@ -117,6 +117,28 @@ div#course_list {
 p i{
   color: #e685b5 !important;
 }
+.accordion-body ol,li {
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-body ol {
+    counter-reset: foo;
+    display: table;
+}
+
+.accordion-body li {
+    list-style: none;
+    counter-increment: foo;
+    display: table-row;
+}
+
+.accordion-body li::before {
+    content: counter(foo) ".";
+    display: table-cell;
+    text-align: right;
+    padding-right: .3em;
+}
 .student-feedbak-section .section-wrapper .sf-left .sfl-thumb .video-button, .instructor-single-section .instructor-wrapper .instructor-single-bottom .skill-item .skill-thumb .circles .circle strong, .pageheader-section.style-2 .pageheader-thumb .video-button, .banner-section .all-shapes::after, .banner-section .all-shapes::before, .shape-img::after {
   top: 50%;
   left: 50%;

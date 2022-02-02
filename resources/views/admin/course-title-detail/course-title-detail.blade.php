@@ -31,11 +31,9 @@
 
                   <form action="{{route('course-title-description.store')}}" method="post" enctype = "multipart/form-data">
                         @csrf
-                        <select class="form-select" name="course_title_id" aria-label="Default select example">
-                            @foreach ($CourseTitle as $item)                        
-                            <option value="{{$item->id}}">{{$item->title}}</option>
-                            @endforeach
-                        </select>
+                       
+                        @livewire('course-title-details')
+
                         <div class="form-group">
                             <label for="description">Description</label>
                             <textarea class="form-control" name = "description"  id="exampleFormControlTextarea1" rows="3"></textarea>
