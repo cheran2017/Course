@@ -45,6 +45,8 @@ Route::get('user-profile',[HomeController::class, 'UserProfile'])->name('profile
 //update profile
 Route::post('update-profile',[HomeController::class, 'UpdateProfile'])->name('update-profile');
 
+Route::get('view-payment-history',[HomeController::class, 'ViewPaymentHistory'])->name('view-payment-history');
+
 //ug degree
 Route::resource('ug-degree', UgDegreeController::class);
 

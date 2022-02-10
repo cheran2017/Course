@@ -20,6 +20,8 @@ use Carbon\Carbon;
 use App\Helpers\General;
 use Psy\CodeCleaner\FunctionReturnInWriteContextPass;
 
+use function PHPUnit\Framework\returnSelf;
+
 class HomeController extends Controller
 {
 
@@ -139,7 +141,8 @@ class HomeController extends Controller
         return view('search-results', compact('SearchResult','Search','Course','Category', 'Technology','User','Enquiry'));
     }
 
-    public function SearchCategory($id){
+    public function SearchCategory($id)
+    {
         $Course      = QueryBuilder::for(Course::class)->get();
         $Category    = QueryBuilder::for(Category::class)->get();
         $Technology  = QueryBuilder::for(Technology::class)->get();
@@ -149,22 +152,11 @@ class HomeController extends Controller
         return view('search-category', compact('Course','Category', 'Technology','User','Enquiry','CourseCategory'));
 
     }
-    // public function Filter(Request $request){
-    //     if($request->ajax()) 
-    //     {
-    //         $Course      = QueryBuilder::for(Course::class)->where('price',$request->price)->get();
+    
+    public function ViewPaymentHistory()
+    {
+        $Enquiry   = QueryBuilder::for(Enquiry::class)->where('user_id',auth()->user()->id)->orderBy('id', 'desc')->get(); 
+        return view('payment-history', compact('Enquiry'));       
 
-    //     }
-    //     else
-    //     {
-    //         $Course      = QueryBuilder::for(Course::class)->get();
-
-    //     }
-    // }
-   
-    public function AllCourses(Request $request){
-
-        return view('all-courses');
-     
     }
 }

@@ -34,7 +34,15 @@
                         <h5 class="text-center mt-2"><a class="float-right text-dark" href="{{route('view-enquiry')}}">View Enquiry</a></h5>
                    </div>
                  
-            </div>
+                </div>
+
+                <div class="shadow-sm bg-white rounded mt-3">
+                    <div class="m-4">
+                         <p class="text-center h2 icon-dash"><i class='fas fa-dollar-sign'></i></p>
+                         <h5 class="text-center mt-2"><a class="float-right text-dark" href="{{route('view-payment-history')}}">Payment History</a></h5>
+                    </div>
+                  
+                </div>
              
             </div>
         </div>

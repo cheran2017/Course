@@ -39,6 +39,10 @@
                             <input type="text" name = "price" class="form-control" id="" aria-describedby="Name" >
                         </div>
                         <div class="form-group">
+                          <label for="Name">Actual Price</label>
+                          <input type="text" name = "actual_price" class="form-control" id="" aria-describedby="Name" >
+                        </div>
+                        <div class="form-group">
                             <label for="Name">Video URL</label>
                             <input type="text" name = "video_url" class="form-control" id="" aria-describedby="Name" >
                         </div>

@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->longText('short_description');
             $table->string('price');
+            $table->string('actual_price');
             $table->longText('detailed_description');
             $table->string('image');
             $table->string('video_url')->nullable();

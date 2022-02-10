@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+  @livewireStyles
 </head>
 
 <body>
@@ -430,6 +431,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main2.js')}}"></script>
+  @livewireScripts
 
 </body>
 

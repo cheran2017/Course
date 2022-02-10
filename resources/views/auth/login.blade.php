@@ -29,6 +29,14 @@
 
     <!-- Login Section Section Starts Here -->
     <div class="login-section padding-tb section-bg">
+        <div class="text-center mx-5">
+            <x-jet-validation-errors class="mb-4 text-danger bg-light border rounded" />
+            @if (session('status'))
+                <div class="mb-4 font-medium text-sm text-green-600">
+                    {{ session('status') }}
+                </div>
+            @endif
+        </div>
         <div class="container">
             <div class="account-wrapper">
                 <h3 class="title">Login</h3>

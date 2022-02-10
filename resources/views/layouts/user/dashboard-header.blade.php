@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{asset('assets2/css/lightcase.css')}}">
 	<link rel="stylesheet" href="{{asset('assets2/css/style.css')}}">
     <link href="{{ asset('assets2/sass/style.scss') }}" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     <!-- boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -82,7 +83,7 @@
 
                         @if (Route::has('login'))
                             @auth
-                                <a href="{{ route('user-register')}}" class="signup text-decoration-none"><i class="icofont-user"></i> <span>{{auth()->user()->name}}</span> </a>
+                                <a href="{{ route('dashboard')}}" class="signup text-decoration-none"><i class="icofont-user"></i> <span>{{auth()->user()->name}}</span> </a>
                             @else
                                 @if (Route::has('register'))
                                 <a href="{{ route('user-register')}}" class="signup text-decoration-none"><i class="icofont-users"></i> <span>SIGN UP</span> </a>
